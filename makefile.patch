@@ -1,0 +1,17 @@
+--- Makefile	2013-08-01 08:52:22.000000000 +0200
++++ Makefile.new	2014-01-17 02:10:17.071500195 +0100
+@@ -130,7 +130,7 @@
+ 
+ KBASE              ?= /lib/modules/`uname -r`
+ KBUILD_DIR         ?= $(KBASE)/build
+-MDEST_DIR          ?= $(KBASE)/kernel/drivers/net/wireless
++MDEST_DIR          ?= $(KBASE)/extra/wl/
+ 
+ all:
+ 	KBUILD_NOPEDANTIC=1 make -C $(KBUILD_DIR) M=`pwd`
+@@ -139,4 +139,5 @@
+ 	KBUILD_NOPEDANTIC=1 make -C $(KBUILD_DIR) M=`pwd` clean
+ 
+ install:
++	mkdir -p $(MDEST_DIR)
+ 	install -D -m 755 wl.ko $(MDEST_DIR)
