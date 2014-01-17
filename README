@@ -24,6 +24,12 @@ depmod -a
 modprobe wl
 
 
+WARNING
+--------------------------------------------------------
+wl.ko will be placed in /lib/modules/$(uname -r)/extra/wl/
+Adjust your distributions location in the Makefile
+
 Sources:
+--------------------------------------------------------
 https://packages.gentoo.org/package/net-wireless/broadcom-sta
 http://www.broadcom.com/support/802.11/linux_sta.php
