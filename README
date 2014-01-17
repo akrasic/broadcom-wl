@@ -20,6 +20,7 @@ make install
 
 modprobe -r bcma
 echo "blacklist bcma" > /etc/modprobe.d/broadcom.conf
+echo "wl" > /etc/modules-load.d/wl.conf
 depmod -a
 modprobe wl
 
