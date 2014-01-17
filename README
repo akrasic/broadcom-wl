@@ -1,11 +1,12 @@
-Set of patches for Broadcom drivers.
+Set of patches for Broadcom wireless adapters
 
 Tested on OpenSuse 13.1 with kernel 3.11
 
-Adapter:
-Broadcom Corporation BCM43142 802.11b/g/n (rev 01)
+Adapter: Broadcom Corporation BCM43142 802.11b/g/n (rev 01)
+Broadcom driver version: 6.30.223.141
 
-Build:
+Build
+---------------------------------------------------------
 
 tar xzf hybrid-v35_64-nodebug-pcoem-6_30_223_141.tar.gz
 
@@ -22,3 +23,7 @@ echo "blacklist bcma" > /etc/modprobe.d/broadcom.conf
 depmod -a
 modprobe wl
 
+
+Sources:
+https://packages.gentoo.org/package/net-wireless/broadcom-sta
+http://www.broadcom.com/support/802.11/linux_sta.php
