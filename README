@@ -1,0 +1,24 @@
+Set of patches for Broadcom drivers.
+
+Tested on OpenSuse 13.1 with kernel 3.11
+
+Adapter:
+Broadcom Corporation BCM43142 802.11b/g/n (rev 01)
+
+Build:
+
+tar xzf hybrid-v35_64-nodebug-pcoem-6_30_223_141.tar.gz
+
+patch -p1 < linux-recent.patch
+patch -p1 < makefile.patch
+patch -p1 < wlan.patch
+patch -p1 < license.patch
+
+make
+make install
+
+modprobe -r bcma
+echo "blacklist bcma" > /etc/modprobe.d/broadcom.conf
+depmod -a
+modprobe wl
+
