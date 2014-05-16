@@ -11,7 +11,7 @@ Build
 tar xzf hybrid-v35_64-nodebug-pcoem-6_30_223_141.tar.gz
 
 patch -p1 < linux-recent.patch
-patch -p1 < makefile.patch
+patch -p0 < makefile.patch
 patch -p1 < wlan.patch
 patch -p1 < license.patch
 
